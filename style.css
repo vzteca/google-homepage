@@ -1,0 +1,127 @@
+:root {
+  --stone: rgb(37, 37, 37);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.header,
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* top: 0; */
+  width: 100%;
+  min-height: 6vh;
+}
+
+.header {
+  top: 0;
+}
+
+.footer {
+  bottom: 0;
+  background-color: #f3f3f3;
+}
+
+.header a,
+.footer a {
+  height: 100%;
+  vertical-align: middle;
+  padding: 0 10px 0 10px;
+}
+
+.header-right,
+.footer-right {
+  padding-right: 10px;
+}
+
+.header-left,
+.footer-left {
+  padding-left: 10px;
+}
+
+a {
+  color: var(--stone);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--stone);
+}
+
+.content {
+  position: absolute;
+  width: 50vw;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 15px;
+  height: 5vh;
+  width: 80%;
+  padding: 10px;
+  outline: 0;
+  background-color: white;
+  font-size: 16px;
+}
+
+#search:hover,
+#search:focus {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  border-radius: 1px;
+  padding: 8px;
+  margin: 3vh 5px 5px 5px;
+  font-size: 16px;
+  background-color: #ececec;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  background-color: #f3f3f3;
+}
+
+img {
+  display: block;
+  margin: 0 auto 2vh auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    width: 80%;
+  }
+
+  .header a,
+  .footer a {
+    font-size: 12px;
+  }
+}
